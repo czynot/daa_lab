@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int class1()
 {
   int n,array[10],i,j,pos,temp;
 

@@ -9,7 +9,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-int main()
+int class2()
 {
   int i, j, n, temp, *a;
   double cpu_time_taken;
