@@ -20,7 +20,7 @@ int binarysearch(int *a, int lo, int up, int x)
     binarysearch(a,mid+1,up,x);
 }
 
-int main()
+int class3a()
 {
   int *a, n, i, x, pos;
 
