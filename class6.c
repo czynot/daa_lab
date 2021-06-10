@@ -2,10 +2,45 @@
 #include<stdlib.h>
 #include<time.h>
 
-int partition(int[],int,int);
-void quicksort(int[],int,int);
+int partition(int arr[],int l,int r)
+{
+  int j=l+1,k=r,temp;
+  int num=arr[l];
 
-int main()
+  while(k>=j)
+  {
+    while(arr[j]<num)
+    j++;
+    while(arr[k]>num)
+    k--;
+  
+    if(k>j)
+    {
+      temp=arr[j];
+      arr[j]=arr[k];
+      arr[k]=temp; 
+    }
+  }
+
+  temp=arr[k];
+  arr[k]=arr[l];
+  arr[l]=temp;
+ 
+  return k;
+}
+
+void quicksort(int arr[],int l,int r)
+{ 
+  int m;
+  if(r>l)
+  {
+    m=partition(arr,l,r);
+    quicksort(arr,l,m-1);
+    quicksort(arr,m+1,r);
+  }
+}
+
+int class6()
 {
   int *arr,n,i;
   clock_t start,end;
